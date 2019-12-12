@@ -1,1 +1,1 @@
-## This will be my personal site
+Contains the files required to build my personal page
