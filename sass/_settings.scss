@@ -4,7 +4,8 @@ $secondaryColor: #bbc2ca;
 $fontColor: #35373a;
 
 //  Sizing
-$gutter: 2%;
+$gutter: 4%;
+$gutterDouble: (2 * $gutter);
 
 //  fonts
 $defaultFont: 'Lato', sans-serif;
