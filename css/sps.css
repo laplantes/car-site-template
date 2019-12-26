@@ -95,10 +95,11 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
+/* --------- HEADER ---------- */
 .header {
   background-color: #424e64;
   color: #bbc2ca;
-  padding: 1rem 2%; }
+  padding: 1rem 4%; }
   .header h1 {
     font-size: 2rem;
     font-weight: 300; }
@@ -106,6 +107,7 @@ html {
     font-size: 1.38rem;
     font-weight: 300; }
 
+/* --------- NAV ---------- */
 .nav {
   background-color: #bbc2ca;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
@@ -114,11 +116,9 @@ html {
     justify-content: space-between;
     flex-wrap: wrap; }
     .nav ul li {
-      width: 25vw;
+      width: 25%;
       min-width: 5rem;
       border-right: 1px solid rgba(0, 0, 0, 0.3); }
-      .nav ul li.active a {
-        background-color: #909ba8; }
       .nav ul li a {
         text-decoration: none;
         display: block;
@@ -127,8 +127,66 @@ html {
         padding: 0.5rem 0;
         color: #424e64;
         transition: background 0.5s ease, color 0.5s ease; }
+        .nav ul li a.active a {
+          background-color: #909ba8; }
         .nav ul li a:hover {
           color: #bbc2ca;
           background-color: #424e64; }
     .nav ul li:last-child {
       border-right: none; }
+
+/* --------- Main ---------- */
+.page-contents .container-banner {
+  width: 100%; }
+
+.page-contents .banner {
+  width: 100%; }
+
+.page-contents h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0 4%;
+  color: #424e64; }
+
+.page-contents hr.fade-away {
+  height: 0.25rem;
+  background: linear-gradient(to right, #424e64 0%, #7d8ca9 25%, #c9d0dc 75%, white 100%);
+  margin: 0 4% 0.5rem 4%; }
+
+.page-contents .container-photo {
+  width: 92%;
+  margin: 0.5rem 4%; }
+  .page-contents .container-photo figcaption {
+    text-align: center;
+    color: #424e64; }
+
+.page-contents .photo {
+  width: 100%; }
+
+/* --------- FOOTER ---------- */
+.footer {
+  width: 100%;
+  background-color: #424e64; }
+  .footer p {
+    text-align: center;
+    color: #bbc2ca;
+    padding: 0.75rem;
+    font-size: 0.9rem; }
+    .footer p a {
+      color: #bbc2ca; }
+
+/* --------- VERY SMALL SCREENS " < 365px " ---------- */
+@media screen and (max-width: 365px) {
+  .nav ul {
+    flex-direction: column; }
+    .nav ul li {
+      width: 100%;
+      border-right: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+      padding: 0.25rem 0; } }
+
+@media only screen and (min-width: 560px) {
+  .page-contents .container-items {
+    display: flex;
+    flex-wrap: wrap; }
+    .page-contents .container-items .container-photo {
+      width: 42%; } }
