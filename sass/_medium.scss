@@ -1,5 +1,19 @@
 // styles apply only to screen sizes above 560px
 @media only screen and (min-width: 560px) {
 
+    .page-contents {
+    
+        & .container-items {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            & .container-photo {
+                width: 50%-$gutterDouble;
+                }
+        }
+
+
+    }
 
 }
