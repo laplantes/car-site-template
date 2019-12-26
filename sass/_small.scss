@@ -4,6 +4,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /* Apply a natural box layout model to all elements */
 * {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
 
+
+/* --------- HEADER ---------- */
 .header {
     background-color: $primaryColor;
     color: $secondaryColor;
@@ -20,6 +22,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     }
 }
 
+/* --------- NAV ---------- */
 .nav {
     background-color: $secondaryColor;
     border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -30,14 +33,10 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
         flex-wrap: wrap;
        
         & li {
-            width:25vw;
+            width:25%;
             min-width: 5rem;
             border-right: 1px solid rgba(0,0,0,0.3);
 
-            &.active a {
-                background-color: darken($color: $secondaryColor, $amount: 15%)
-            }
-            
             & a {                
                 text-decoration: none;
                 display: block;
@@ -46,6 +45,10 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
                 padding: 0.5rem 0;
                 color: $primaryColor;
                 transition: background 0.5s ease, color 0.5s ease;
+                
+                &.active a {
+                    background-color: darken($color: $secondaryColor, $amount: 15%)
+                }
                 
                 &:hover {
                     color: $secondaryColor;
@@ -56,6 +59,68 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
         & li:last-child {
             border-right: none;
+        }
+    }
+}
+
+/* --------- Main ---------- */
+.page-contents {
+
+    .container-banner {width: 100%;}
+    .banner{width: 100%;}
+
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: $primaryColor;
+    }
+
+    hr.fade-away {
+        height: 0.25rem;
+        background: linear-gradient(to right, $primaryColor 0%,lighten($primaryColor, 25%) 25%,lighten($primaryColor, 50%) 75%,lighten($primaryColor, 75%) 100%);
+        margin: 0 $gutter 0.5rem $gutter;
+    }
+
+    .container-photo {
+        width: 100%-$gutterDouble; margin: 0.5rem $gutter;
+    
+        & figcaption {
+            text-align: center;
+            color: $primaryColor;
+        }
+    }
+    .photo {width: 100%;}
+}
+
+/* --------- FOOTER ---------- */
+.footer {
+    width: 100%;
+    background-color: $primaryColor;
+
+    & p {
+        text-align: center;
+        color: $secondaryColor;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+
+        & a {
+            color: $secondaryColor;
+        }
+    }
+}
+
+/* --------- VERY SMALL SCREENS " < 365px " ---------- */
+
+@media screen and (max-width: 365px) {
+
+    .nav ul {
+        flex-direction: column;
+        
+        & li {
+            width: 100%;
+            border-right: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 0.25rem 0;
         }
     }
 }
