@@ -2,9 +2,13 @@
 @media only screen and (min-width: 1140px) {
 
     /*--------- BODY ---------*/
+    body {
+        background-image: url(../images/polonez_car.png);
+    }
+
     .page {
-        max-width: 120rem;
-        margin: 0 auto;
+        max-width: 100rem;
+        margin: 1rem auto;
         box-shadow: 0 0 10px #000;
     }
 
@@ -37,9 +41,9 @@
 
     /*--------- MAIN ---------*/
     .page-contents {
-    
+
         .container-banner {
-            max-width: 90rem;
+            max-width: 45rem;
             margin: 0 auto;
         }
 
