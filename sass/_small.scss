@@ -46,15 +46,16 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
                 color: $primaryColor;
                 transition: background 0.5s ease, color 0.5s ease;
                 
-                &.active a {
-                    background-color: darken($color: $secondaryColor, $amount: 15%)
-                }
                 
                 &:hover {
                     color: $secondaryColor;
                     background-color: $primaryColor;
                 }
             }
+        }
+        
+        & .active {
+            background-color: darken($color: $secondaryColor, $amount: 15%)
         }
 
         & li:last-child {
