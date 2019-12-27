@@ -1,6 +1,14 @@
 // styles apply only to screen sizes above 1140px
 @media only screen and (min-width: 1140px) {
 
+    /*--------- BODY ---------*/
+    .page {
+        max-width: 120rem;
+        margin: 0 auto;
+        box-shadow: 0 0 10px #000;
+    }
+
+    
     /*--------- NAV ---------*/
     .nav ul {
         margin-left: $gutter;
@@ -8,6 +16,7 @@
 
         & li {
             width: auto;
+            border: none;
 
             & :first-child {
                 border-left: 1px solid rgba(0,0,0,0.3);
@@ -29,11 +38,36 @@
     /*--------- MAIN ---------*/
     .page-contents {
     
-        & .container-items {
+        .container-banner {
+            max-width: 90rem;
+            margin: 0 auto;
+        }
 
-            & .container-photo {
+        .container-items {
+
+            .container-photo {
                 width: 25%-$gutterDouble;
                 }
+        }
+
+        .blog {
+            display: flex;
+            flex-wrap: wrap;
+
+            & article {
+                margin: 0.5rem $gutter;
+                width: 33.33%-$gutterDouble;
+            }
+
+            & h3 {
+                font-size: 1.2 rem;
+                color: lighten($primaryColor, 10%);
+            }
+
+            & p {
+                line-height: 130%;
+                color: $fontColor;
+            }
         }
     }
 
