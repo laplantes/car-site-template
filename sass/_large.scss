@@ -1,5 +1,40 @@
 // styles apply only to screen sizes above 1140px
 @media only screen and (min-width: 1140px) {
 
+    /*--------- NAV ---------*/
+    .nav ul {
+        margin-left: $gutter;
+        justify-content: unset;
+
+        & li {
+            width: auto;
+
+            & :first-child {
+                border-left: 1px solid rgba(0,0,0,0.3);
+            }
+
+            & :last-child {
+                border-right: 1px solid rgba(0,0,0,0.3);
+            }
+
+            & a {
+                padding: 1rem;
+                font-size: 1.2rem;
+            }
+        
+        }
+    }
+
+
+    /*--------- MAIN ---------*/
+    .page-contents {
+    
+        & .container-items {
+
+            & .container-photo {
+                width: 25%-$gutterDouble;
+                }
+        }
+    }
 
 }
