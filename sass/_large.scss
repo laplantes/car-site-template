@@ -59,19 +59,9 @@
             flex-wrap: wrap;
 
             & article {
-                margin: 0.5rem $gutter;
                 width: 33.33%-$gutterDouble;
             }
 
-            & h3 {
-                font-size: 1.2 rem;
-                color: lighten($primaryColor, 10%);
-            }
-
-            & p {
-                line-height: 130%;
-                color: $fontColor;
-            }
         }
     }
 
