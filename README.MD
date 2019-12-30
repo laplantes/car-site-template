@@ -1,1 +1,1 @@
-Contains the files required to build my personal page
+Contains the files required to build a template car sales site
